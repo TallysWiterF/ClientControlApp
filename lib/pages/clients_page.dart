@@ -121,6 +121,11 @@ class _ClientsPageState extends State<ClientsPage> {
               ),
             ),
             actions: [
+              TextButton(
+                  child: const Text("Cancelar"),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
               Consumer<Clients>(
                 builder: ((BuildContext context, Clients listClients,
                     Widget? widget) {
@@ -138,11 +143,6 @@ class _ClientsPageState extends State<ClientsPage> {
                       });
                 }),
               ),
-              TextButton(
-                  child: const Text("Cancelar"),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
             ],
           );
         });
